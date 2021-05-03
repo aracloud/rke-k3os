@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
     esxi.guest_guestos = 'ubuntu-64'
     esxi.guest_nic_type = 'vmxnet3'
     esxi.debug = 'false'
-    
+
   end #end of provider
 
 end

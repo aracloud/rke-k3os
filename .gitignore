@@ -1,4 +1,5 @@
 packer_cache/
+.vagrant/
 variables.json
 esxi_password
 k3os.box
