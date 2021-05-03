@@ -1,0 +1,58 @@
+{
+  "builders": [
+    {
+      "boot_command": [
+        "rancher",
+        "<enter>",
+        "sudo k3os install",
+        "<enter>",
+        "1",
+        "<enter>",
+        "y",
+        "<enter>",
+        "http://{{ .HTTPIP }}:{{ .HTTPPort }}/config.yml",
+        "<enter>",
+        "y",
+        "<enter>"
+      ],
+      "boot_wait": "40s",
+      "disk_size": "8000",
+      "guest_os_type": "ubuntu-64",
+      "http_directory": ".",
+      "iso_checksum": "{{user `iso_checksum`}}",
+      "iso_url": "{{user `iso_url`}}",
+      "shutdown_command": "sudo poweroff",
+      "ssh_keypair_name": "",
+      "ssh_private_key_file": "packer_rsa",
+      "ssh_timeout": "1000s",
+      "ssh_username": "rancher",
+      "type": "vmware-iso",
+
+      "remote_type": "esx5",
+      "remote_host": "{{user `esxi_host`}}",
+      "remote_datastore": "{{user `esxi_datastore`}}",
+      "remote_username": "{{user `esxi_username`}}",
+      "remote_password": "{{user `esxi_password`}}",
+
+      "keep_registered": true,
+
+      "vmx_data": {
+        "ethernet0.networkName": "VM Network"
+      },
+      "vnc_disable_password": "true"
+
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "output": "k3os.box"
+    }
+  ],
+  "variables": {
+    "iso_checksum": "ab15fcd4c4f5ed8805932523f85594f6844fe611fc50f8bc9a82ddd9bd326db0",
+    "iso_url": "https://github.com/rancher/k3os/releases/download/v0.11.1/k3os-amd64.iso",
+    "password": "rancher"
+  }
+}
+
