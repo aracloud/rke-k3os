@@ -17,6 +17,7 @@
       ],
       "boot_wait": "40s",
       "disk_size": "8000",
+      "format": "ova",
       "guest_os_type": "ubuntu-64",
       "http_directory": ".",
       "iso_checksum": "{{user `iso_checksum`}}",
