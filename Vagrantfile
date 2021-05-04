@@ -2,7 +2,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "k3os.box"
   #config.vm.guest = "linux"
   #config.vm.synced_folder ".", "/vagrant", disabled: true
-  config.vm.hostname = "rke-k3os"
+  #config.vm.hostname = "rke-k3os"
 
   config.ssh.username = 'rancher'
   config.ssh.password = 'rancher'
