@@ -13,6 +13,7 @@ Vagrant.configure("2") do |config|
     esxi.esxi_password = 'file:./esxi_password'
     esxi.esxi_virtual_network = ['VM Network']
     esxi.esxi_disk_store = 'datastore'
+    esxi.guest_name = "rke-k3os"
     esxi.guest_memsize = 3072
     esxi.guest_numvcpus = 2
     esxi.guest_boot_disk_size = 30
