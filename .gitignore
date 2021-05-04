@@ -3,6 +3,7 @@ packer_cache/
 variables.json
 esxi_password
 k3os.box
+log.txt
 
 .vscode/
 .DS_Store
