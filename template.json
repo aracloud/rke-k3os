@@ -23,8 +23,7 @@
       "iso_checksum": "{{user `iso_checksum`}}",
       "iso_url": "{{user `iso_url`}}",
       "shutdown_command": "sudo poweroff",
-      "ssh_keypair_name": "",
-      "ssh_private_key_file": "packer_rsa",
+
       "ssh_timeout": "1000s",
       "ssh_username": "rancher",
       "type": "vmware-iso",
