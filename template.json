@@ -18,7 +18,7 @@
       "boot_wait": "40s",
       "disk_size": "8000",
       "format": "vmx",
-      "guest_os_type": "ubuntu-64",
+      "guest_os_type": "other-64",
       "http_directory": ".",
       "iso_checksum": "{{user `iso_checksum`}}",
       "iso_url": "{{user `iso_url`}}",
@@ -28,7 +28,7 @@
       "ssh_timeout": "1000s",
       "ssh_username": "rancher",
       "type": "vmware-iso",
-      "name": "rke-k3os",
+      "name": "k3os",
 
       "remote_type": "esx5",
       "remote_host": "{{user `esxi_host`}}",
