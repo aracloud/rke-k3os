@@ -28,6 +28,7 @@
       "ssh_timeout": "1000s",
       "ssh_username": "rancher",
       "type": "vmware-iso",
+      "name": "rke-k3os",
 
       "remote_type": "esx5",
       "remote_host": "{{user `esxi_host`}}",
