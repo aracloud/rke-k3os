@@ -16,8 +16,8 @@ Vagrant.configure("2") do |config|
       machine.vm.box = box
       machine.vm.hostname = name
 
-      machine.ssh.username = 'rancher'
-      machine.ssh.password = 'rancher'
+      #machine.ssh.username = 'rancher'
+      #machine.ssh.password = 'rancher'
 
       machine.vm.provider :vmware_esxi do |esxi|
         esxi.esxi_hostname = 'esxi'
